@@ -8,25 +8,30 @@ class Persona:
         print(f"Email: {self.email}")
         
 class Alumno(Persona):
-    pass
+    
+    def __init__(self, nombre, email, curso):
+        super().__init__(nombre, email)
+        self.curso = curso
+        
+    def mostrar(self):
+        print("======= DATOS DEL ALUMNO =======")
+        super().mostrar()
+        print(f"Curso: {self.curso}")
 
 class Profesor(Persona):
     def __init__(self, nombre, email, esp):
         super().__init__(nombre, email)
         self.especialidad = esp
 
-    def mostrar_profesor(self):
+    def mostrar(self):
+        print("======= DATOS DEL PROFESOR =======")
         super().mostrar()
         print(f"Especialidad: {self.especialidad}")
 
-alumno1 = Alumno("Juan Perez", "jperez@gmail.com")
+alumno1 = Alumno("Juan Perez", "jperez@gmail.com","Fisica")
 alumno1.mostrar()
 
 profesor1 = Profesor("Ana Gomez", "ana@gmail.com","Matemáticas")
-profesor1.mostrar_profesor()
-        
+profesor1.mostrar()
 
-        ## self_init es el constructor de la clase
-        #super() es una función que permite llamar a métodos de la clase padre desde la clase hija
-        #. es el operador de acceso a atributos y métodos de un objeto
-        #self es una referencia al objeto actual de la clase
+##Varia el comportamiento de mostrar, funcionan de manera diferente segun la clase que lo invoque
