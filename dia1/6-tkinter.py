@@ -1,8 +1,10 @@
 from tkinter import *
+from tkinter import messagebox
 
 def saludar():
     nombre = txt_nombre.get()
     print(f"Hola, {nombre}!")
+    messagebox.showinfo("Saludo", f"Hola, {nombre}!")
     
 #creamos un objeto de la clase Tk
 app = Tk()
@@ -27,3 +29,4 @@ btn_saludar.grid(row=1,column=0)
 
 #mostramos la ventana
 app.mainloop()
+
