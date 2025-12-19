@@ -14,3 +14,10 @@ add nota int DEFAULT 0;
 
 #eliminar table 
 drop table alumnos
+
+CREATE TABLE empresa(  
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+    ruc VARCHAR(12) NOT NULL UNIQUE,
+    razon_social VARCHAR(255) NOT NULL,
+    direccion TEXT
+);  
