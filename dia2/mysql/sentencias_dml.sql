@@ -31,6 +31,7 @@ set email='cesar@gmail.com' where id = 1;
 update alumnos
 set email = CONCAT(lower(replace(nombre,' ' ,'.')),'@gmail.com') where id > 1;
 
+
 -- SELECT
 select * from alumnos;
 select nombre,email from alumnos;
@@ -40,3 +41,9 @@ select * from alumnos order by nombre asc;
 -- DELETE
 delete from alumnos where id = 3;
 truncate table alumnos;
+#manipulo datos, como insertar, hacer CRUD como menciona arriba
+#truncar te limpia todo vs delete from - borra completamente (queda como residuos en el motor de la base de datos - continua el correlativo)
+#cuando usas trunca elimina todos los redisuos, por eso que el correlativo se reinicia
+
+#ya no se usa delete > colocan una columna mas con "activo" y "inactivo", y despues no lo insertas o filtras solo con los activos, 
+#imagina que un trabajador vuelva a ala empresa, lo activas de nuevo 

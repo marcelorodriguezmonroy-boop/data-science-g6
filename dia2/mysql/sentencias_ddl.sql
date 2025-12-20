@@ -18,6 +18,11 @@ drop table alumnos
 CREATE TABLE empresa(  
     id int NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
     ruc VARCHAR(12) NOT NULL UNIQUE,
-    razon_social VARCHAR(255) NOT NULL,
+    razon_social VARCHAR(255) NOT NULL, 
     direccion TEXT
 );  
+#creo tablas y elimino
+#varchar es hasta 255 caracteres, text es infinito
+#not null es para que no haya invalidos 
+
+#para el bootcamo es suficiente esto 
